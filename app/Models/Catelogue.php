@@ -12,9 +12,14 @@ class Catelogue extends Model
     protected  $fillable=[
         'name',
         'cover',
-        'is_active'
+        'gia'
         ];
     protected $casts=[
         'is_active'=>'boolean',
     ];
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }

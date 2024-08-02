@@ -107,7 +107,7 @@
 
 <!-- apexcharts -->
 @yield('script-libs')
-
+@yield('scripts')
 
 <!-- App js -->
 <script src="{{ asset('theme/admin/assets/js/app.js') }}"></script>

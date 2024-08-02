@@ -44,6 +44,7 @@
                             <th>Updated at</th>
                             <th>Action</th>
                         </tr>
+
                         <tbody>
                         @foreach($data as $item)
 

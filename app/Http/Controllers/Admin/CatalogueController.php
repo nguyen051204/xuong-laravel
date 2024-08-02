@@ -39,9 +39,9 @@ class CatalogueController extends Controller
         $data=$request->except('cover'); // lays tat ca du lieu tru cover
         $data['is_active'] ??=0;
 
-        if($request->hasFile('cover')){
-            $data['cover']= Storage::put(self::PATH_UPLOAD, $request->file('cover'));
-        }
+            if($request->hasFile('cover')){
+                $data['cover']= Storage::put(self::PATH_UPLOAD, $request->file('cover'));
+            }
 
         Catelogue::query()->create($data);
         return redirect()->route('admin.catalogues.index');

@@ -26,6 +26,6 @@ class RegisterController extends Controller
 
     $User= User::query()->create($data);
     Auth::login($User);
-    return redirect()->intended('home');
+    return redirect()->back()   ;
     }
 }

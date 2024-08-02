@@ -11,7 +11,7 @@ class LoginController extends Controller
 {
    public function showFormLogin()
    {
-    return view('auth.login');
+    return view('login');
    }
    public function login(Request $request)//validate
    {
@@ -20,14 +20,21 @@ class LoginController extends Controller
            'password' => ['required'],
        ]);
 
+       // Kiểm tra thông tin đăng nhập
        if (Auth::attempt($credentials)) {
+           // Tạo phiên làm việc mới
            $request->session()->regenerate();
 
-           return redirect()->intended('/home');
-       } // truy cap csdl kt du lieu dung k
+           // Chuyển hướng đến trang chính
+           return redirect('/');
+       }
+
+       // Nếu đăng nhập không thành công, quay lại trang đăng nhập với thông báo lỗi
        return back()->withErrors([
            'email' => 'Sai thông tin đăng nhập',
        ])->onlyInput('email');
+
+
    }
     public function logout()
     {

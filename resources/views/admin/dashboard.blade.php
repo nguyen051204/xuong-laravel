@@ -1000,9 +1000,11 @@
 
     <!-- Dashboard init -->
     <script src="{{ asset('theme/admin/assets/js/pages/dashboard-ecommerce.init.js') }}"></script>
+
 @endsection
 
 @section('script-libs')
+
     <link href="{{ asset('theme/admin/assets/libs/jsvectormap/css/jsvectormap.min.css') }}" rel="stylesheet"
           type="text/css"/>
     <link href="{{ asset('theme/admin/assets/libs/swiper/swiper-bundle.min.css') }}" rel="stylesheet" type="text/css"/>

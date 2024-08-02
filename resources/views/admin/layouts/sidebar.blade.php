@@ -77,6 +77,21 @@
                                 </li>
                             </ul>
                         </div>
+
+                    </li> <!-- end Dashboard Menu --><li class="nav-item">
+                        <a class="nav-link menu-link" href="#sidebarLayouts" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarLayouts">
+                            <i class="ri-layout-3-line"></i> <span data-key="t-layouts">Sản phẩm</span>
+                        </a>
+                        <div class="collapse menu-dropdown" id="sidebarLayouts">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a href="{{route('admin.products.index')}}" target="_blank" class="nav-link" data-key="t-horizontal">Danh sách</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{route('admin.products.create')}}" target="_blank" class="nav-link" data-key="t-detached">Thêm mới</a>
+                                </li>
+                            </ul>
+                        </div>
                     </li> <!-- end Dashboard Menu -->
 
 
